@@ -5,3 +5,10 @@ controllers:
 kernel:
     resource: ../src/Kernel.php
     type: annotation
+
+# On créé la route qui s'appelle hello
+hello:
+    # Le chemin dans l'url doit être /hello pour afficher la page
+    path: /hello
+    # Désigne le controller et la méthode qui seront chargés
+    controller: App\Controller\TestController::hello

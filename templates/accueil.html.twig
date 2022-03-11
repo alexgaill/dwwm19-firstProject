@@ -1,0 +1,21 @@
+{% extends "base.html.twig" %}
+
+{% block title %}Mon super blog{% endblock %}
+
+{% block body %}
+    <h1>Mon super blog</h1>
+    <small>Blog rédigé par le groupe DWWM19</small>
+    
+    <p>Ce blog est rédigé pour découvrir Symfony</p>
+    {% set hello = "Hello World" %}
+
+    <h2>{{ hello }}</h2>
+    <p>{{ nomVariable }}</p>
+
+    <h2>Liste des utilisateurs</h2>
+    <ul>
+        {% for user in listUser %}
+            <li>{{ user.prenom }} {{ user.nom }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
